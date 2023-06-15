@@ -1,4 +1,4 @@
-# mongo_fastapi
+# mongo_fastapi_courses
 1. Firstly Clone the repo.
 2. copy .env.example to .env
 3. In .env , Update all of values of database keys like db_username, db_password,db_host,db_port,db_name . These will be used to setup user for accessing database
