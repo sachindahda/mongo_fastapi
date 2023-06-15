@@ -1,0 +1,21 @@
+version: '3'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8000:8000
+    depends_on:
+      - mongodb
+    volumes:
+      - ./:/app
+  mongodb:
+    image: mongo
+    ports:
+      - 27018:27017
+    volumes:
+      - ./mongo_data:/data/db
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=${db_username}
+      - MONGO_INITDB_ROOT_PASSWORD=${db_password}
